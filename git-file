@@ -89,6 +89,8 @@ M->with red show file modified in working directory
  - Switch to another branch
    -git checkout branchname
 
+- Create and switch to branch
+   - git checkout -b new-branch-name
   -Merge branch with master branch
    -git merge brachname 
 
