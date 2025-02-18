@@ -1,0 +1,167 @@
+1) When using first time git
+git config --global user.name Divesh
+git config --global user.email diveshk442@gmail.com
+-check value is set or not
+ git config --global user.name/email
+
+Extra: ls -lart =>show all folders including hidden folders
+
+2)To get Repo
+- using int=> starting from beginning
+   ->git init =>intialize your empty git repository
+   .git-> folder contains all git files.
+
+-git status=> show status
+
+-Git Stages
+1)untracked (git is not tracking the file- No file)
+   |
+   |
+   V
+git add the file and record change of our files
+2)staged (All files that need to be commit)
+   - git add filename-> to add files in staging area
+   -git add -A->add all files in staging area
+   |
+   |
+   V
+3)commit-> Is like a snapshot
+   ->to start project tracking, need to start with one commit.(Called inital commit)
+   -git commit->to commit all files in staging area
+   -git commit -m "Added more Html" =>directly add file in commit
+
+   -git checkout contact.php =>matches with last commit for that particular file(useful when a file changed automatically in your system. it will revered back it)
+   -git checkout -f=>matches all the modified file with commit and revered back to last change.
+
+
+   -git log=> what you have commit.
+   -git log -p  -1=>used to see the how many last commmit(example 1 to see last 1 commit)
+   |
+   |
+   V
+ 4)Unmodified(git record your file, take a screnshot)
+ Now you can edit this file or remain it as is it.
+
+   |                                            | 
+   |                                            | 
+   V                                            V
+   if you edit it will goes to modified        or can remove
+
+
+
+-or cloning=> get all data from server
+
+====================================================================================
+- git diff
+check working file with staging area and check the difference
+
+-git diff --staged
+compare staging with last commit
+
+-git commit -a -m "skip staging area and directly commit"  =>to directly commit files.
+
+-git rm --cached filename--> to send file to untracted from commit or from staging state
+-git rm--> To remove file permanently.
+
+- git status -s
+M->with green shows file modified in staging 
+M->with red show file modified in working directory
+
+- .gitignore -> include files which we don't want to add to github.  
+--> create .gitignore file.
+ - It will ignorws all the files declared inside this file
+
+- Want to ignore files with particular extension (inside .gitignore)
+   *.log
+
+- To ignore file in root directory where .gitignore file is. And not in folders
+- To ignore a folder --> /folderName
+
+
+==> Branches
+   Create a copy and work on it without effect on original 
+   (Bydefault Main branch is Master)
+
+  - Create new branch
+   -git branch NewBranchName
+   -git branch -> list all branches.
+
+ - Switch to another branch
+   -git checkout branchname
+
+  -Merge branch with master branch
+   -git merge brachname 
+
+=================================================================================
+GitHub:
+   -github is a hosting service, for git repository. 
+
+  - Remote repository
+   URL where we host our Repository.
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+
+
+
+   -To connect local git repository and remote git repository.
+      - git remote add origin https://github.com/DiveshRW/git-Notes.git
+
+     - remote -> origin(short name of URL)
+     git remote (check list of remote) 
+
+     -git remote -v (define URL from where we can fetch and pull)
+
+ - git push origin master ==> Push (master) branch into (origin)
+
+- Read, write access to private repository.
+
+- To give access to PC to read and write private git repository. (SSH)
+    -ssh-keygen -t ed25519 -C "diveshk442@gmail.com" (key generated)
+    -eval "$(ssh-agent -s)" this will generate (Agent pid 59566)
+
+    -ssh-add ~/.ssh/id_ed25519
+
+    -cat ~/.ssh/id_ed25519.pub -> show all content (add it to SSH keys)
+
+    Now deploy SSH key in github account.
+    - Adding a new SSH key to your GitHub account 
+
+    - git remote set-url origin (url) --> It will change URL.
+    - git push -u origin master ==>push code in Github
+
+    - To add more branches in github hosting.
+      - git checkout branchname
+      - git push -u origin branchname
+
+- git push -> push in a current branch
+
+-git push -u origin master -> push in a master branch and if next time we run git push it will push code in master branch.
+
+=====================================================================================
+git push -u origin master => push changes in github
+
+-  Pull request ->Request repository owner to open pull request and to change the code. Then approve by owner. 
+
+- Undo last push command - git push --force-with-lease origin HEAD~1:branch_name
+
+
+
+.////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Cloud Computing
+1) Fundamentals
+- understand what is cloud computing
+- Type of cloud computing
+- Variety of services and solutions
+- Key players in the industry
+
+2) Operating Systems
+knowledge of top operating systems.
+server specification OS
+3) Programming
+- Knowledge of sql and DB langauges
+- Python is popular
+- Experience with .Net art
+- Push towards the hands on approach
